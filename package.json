@@ -1,0 +1,13 @@
+{
+  "name": "mesto-ad",
+  "version": "1.0.0",
+  "description": "Проектная работа Mesto. Валидация форм и сборка кода",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}
