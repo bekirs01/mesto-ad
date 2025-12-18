@@ -55,7 +55,7 @@ const handleProfileFormSubmit = (evt) => {
 const handleAvatarFromSubmit = (evt) => {
   evt.preventDefault();
   profileAvatar.style.backgroundImage = `url(${avatarInput.value})`;
-  avatarForm.reset(); // sonradan eklendi 
+  avatarForm.reset(); // sonradan eklendi  Formu ilk hâline döndürüyor
   closeModalWindow(avatarFormModalWindow);
 };
 
@@ -75,7 +75,7 @@ const handleCardFormSubmit = (evt) => {
     )
   );
 
-    cardForm.reset(); // sonradan eklendi
+    cardForm.reset(); // sonradan eklendi Formu ilk hâline döndürüyor
   closeModalWindow(cardFormModalWindow);
 };
 
@@ -87,19 +87,19 @@ avatarForm.addEventListener("submit", handleAvatarFromSubmit);
 openProfileFormButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  clearValidation(profileForm, validationSettings); //sonradan eklendi
+  clearValidation(profileForm, validationSettings); //sonradan eklendi buda temizle gosterme gibi bir sey
   openModalWindow(profileFormModalWindow);
 });
 
 profileAvatar.addEventListener("click", () => {
   avatarForm.reset();
-  clearValidation(avatarForm, validationSettings); //bu satir sonradan eklendi 
+  clearValidation(avatarForm, validationSettings); //bu satir sonradan eklendi  resim icin temizliyor 
   openModalWindow(avatarFormModalWindow);
 });
 
 openCardFormButton.addEventListener("click", () => {
   cardForm.reset();
-  clearValidation(cardForm, validationSettings); //bu satir sonradan eklendi 
+  clearValidation(cardForm, validationSettings); //bu satir sonradan eklendi kart ekleme butonu acmadan once onu temizler
   openModalWindow(cardFormModalWindow);
 });
 
