@@ -94,7 +94,7 @@ function clearValidation(formElement, settings) {
     hideInputError(formElement, inputElement, settings);
   });
 
-  disableSubmitButton(buttonElement, settings);
+ 
 }
 
 function enableValidation(settings) {
