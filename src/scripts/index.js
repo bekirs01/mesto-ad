@@ -149,7 +149,7 @@ const handleCardFormSubmit = (evt) => {
     });
 };
 
-// ✅ remove-card submit
+// ✅ remove-card submit ikinci
 const handleRemoveCardSubmit = (evt) => {
   evt.preventDefault();
 
@@ -273,6 +273,9 @@ function handleLikeCard(cardId, likeButton, likeCountElement) {
 
 // ✅ UX helper
 function renderLoading(isLoading, buttonElement, defaultText, loadingText) {
-  if (!buttonElement) return;
-  buttonElement.textContent = isLoading ? loadingText : defaultText;
+  if (isLoading === true) {
+  buttonElement.textContent = loadingText;
+} else {
+  buttonElement.textContent = defaultText;
+}
 }
