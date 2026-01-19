@@ -261,14 +261,7 @@ function handleLikeCard(cardId, likeButton, likeCountElement) {
 
   changeLikeCardStatus(cardId, isLiked)
     .then((updatedCard) => {
-      const newIsLiked = updatedCard.likes.some((user) => user._id === profileUserId);
-
-      if (newIsLiked) {
-        likeButton.classList.add("card__like-button_is-active");
-      } else {
-        likeButton.classList.remove("card__like-button_is-active");
-      }
-
+      likeCard(likeButton);
       if (likeCountElement) {
         likeCountElement.textContent = updatedCard.likes.length;
       }
